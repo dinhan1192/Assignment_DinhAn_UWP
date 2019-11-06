@@ -16,18 +16,13 @@
                                                           
                                                               >
                 <NavigationView.MenuItems>
-                    <NavigationViewItem Tag="home" Icon="Home" Content="Home"/>
+                    <NavigationViewItem Tag="allmusic" Icon="Home" Content="All Music"/>
                     <NavigationViewItemSeparator/>
                     <NavigationViewItemHeader x:ConnectionId='3' x:Name="MainPagesHeader"
                                            Content="Main pages"/>
                     <NavigationViewItem Tag="mymusic" Content="My Music">
                         <NavigationViewItem.Icon>
                             <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB3C;"/>
-                        </NavigationViewItem.Icon>
-                    </NavigationViewItem>
-                    <NavigationViewItem Tag="allmusic" Content="All Music">
-                        <NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
                     <NavigationViewItem Tag="register" Content="Register">
@@ -50,7 +45,7 @@
                 <NavigationView.AutoSuggestBox>
                     <!-- See AutoSuggestBox documentation for
                  more info about how to implement search. -->
-                    <AutoSuggestBox x:ConnectionId='4' x:Name="NavViewSearchBox" QueryIcon="Find"/>
+                    <AutoSuggestBox x:ConnectionId='4' x:Name="NavViewSearchBox" QueryIcon="Find" />
                 </NavigationView.AutoSuggestBox>
 
                 <Frame x:ConnectionId='5' x:Name="ContentFrame" Padding="12,0,12,24" IsTabStop="True"

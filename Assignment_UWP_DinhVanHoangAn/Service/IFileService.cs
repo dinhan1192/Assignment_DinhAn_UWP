@@ -12,5 +12,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Service
         Task<bool> SaveMemberCredentialToFile(MemberCredential memberCredential);
 
         Task<MemberCredential> ReadMemberCredentialFromFile();
+
+        void SignOutByDeleteToken();
     }
 }

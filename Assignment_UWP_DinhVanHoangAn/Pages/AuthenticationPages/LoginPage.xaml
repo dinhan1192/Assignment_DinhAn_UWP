@@ -28,7 +28,7 @@
         </Style>
     </Page.Resources>
 
-    <Grid HorizontalAlignment="Center" >
+    <Grid HorizontalAlignment="Center" Background="Beige">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="Auto"></RowDefinition>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Windows.Storage;
 using Newtonsoft.Json;
 using Assignment_UWP_DinhVanHoangAn.Entity;
+using System.Diagnostics;
 
 namespace Assignment_UWP_DinhVanHoangAn.Service
 {
@@ -47,6 +48,20 @@ namespace Assignment_UWP_DinhVanHoangAn.Service
                 // ignored
             }
             return null;
+        }
+
+        public async void SignOutByDeleteToken()
+        {
+            try
+            {
+                var storageFolder = await ApplicationData.Current.LocalFolder.CreateFolderAsync("AccountFile",
+                    CreationCollisionOption.OpenIfExists);
+                   await storageFolder.DeleteAsync(StorageDeleteOption.Default);
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine(e.ToString());
+            }
         }
     }
 }

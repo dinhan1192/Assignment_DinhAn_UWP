@@ -35,6 +35,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.AuthenticationPages
         private string _gender = "Gender";
         private StorageFile photo;
         private IMemberService _memberService;
+        private IFileService _fileService;
 
         #region event
 
@@ -42,6 +43,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.AuthenticationPages
         {
             this.InitializeComponent();
             this._memberService = new MemberService();
+            this._fileService = new LocalFileService();
         }
 
         private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
@@ -93,6 +95,14 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.AuthenticationPages
             {
                 Debug.WriteLine("Register fails !");
             }
+
+            var memberLogin = new MemberLogin();
+            memberLogin.email = member.email;
+            memberLogin.password = member.password;
+            var memberCredential = this._memberService.Login(memberLogin);
+            this._fileService.SaveMemberCredentialToFile(memberCredential);
+            ProjectConfiguration.CurrentMemberCredential = memberCredential;
+            this.Frame.Navigate(typeof(MusicPages.AllMusicPage));
         }
 
         //private async void SaveFile2Folder(Member member)

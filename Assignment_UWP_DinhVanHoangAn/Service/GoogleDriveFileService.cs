@@ -18,5 +18,10 @@ namespace Assignment_UWP_DinhVanHoangAn.Service
         {
             throw new NotImplementedException();
         }
+
+        public void SignOutByDeleteToken()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

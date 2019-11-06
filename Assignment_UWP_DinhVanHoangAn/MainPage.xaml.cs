@@ -1,4 +1,5 @@
-﻿using Assignment_UWP_DinhVanHoangAn.Pages.AuthenticationPages;
+﻿using Assignment_UWP_DinhVanHoangAn.Entity;
+using Assignment_UWP_DinhVanHoangAn.Pages.AuthenticationPages;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -27,6 +28,15 @@ namespace Assignment_UWP_DinhVanHoangAn
         public MainPage()
         {
             this.InitializeComponent();
+            this.Loaded += CheckAndLoad;
+        }
+
+        private void CheckAndLoad(object sender, RoutedEventArgs e)
+        {
+            if (ProjectConfiguration.CurrentMemberCredential != null)
+            {
+                this.Frame.Navigate(typeof(Pages.MusicPages.AllMusicPage));
+            }
         }
 
         private void HypLogin_Click(Windows.UI.Xaml.Documents.Hyperlink sender, Windows.UI.Xaml.Documents.HyperlinkClickEventArgs args)

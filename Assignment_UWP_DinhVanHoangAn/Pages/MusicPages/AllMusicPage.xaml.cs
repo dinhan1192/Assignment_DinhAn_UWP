@@ -32,6 +32,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
         private ISongService _songService;
         private bool running = false;
         private int currentIndex = 0;
+        private IFileService _fileService;
 
         public AllMusicPage()
         {
@@ -39,6 +40,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
             Debug.WriteLine("Init list song");
             this.Loaded += CheckAndLoad;
             this.InitializeComponent();
+            this._fileService = new LocalFileService();
             this._songService = new SongService();
         }
 
@@ -55,23 +57,40 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
             }
             else
             {
-                LoadSongs();
+                LoadAllSongs();
             }
         }
 
-        private void LoadSongs()
+        public void LoadAllSongs()
         {
             if (refresh)
             {
                 Debug.WriteLine("Fetching song");
                 var list = this._songService.GetAllSong(ProjectConfiguration.CurrentMemberCredential);
                 ListAllSong = new ObservableCollection<Song>(list);
+
                 refresh = false;
             }
+            //else if (!refresh && ProjectConfiguration.txtNavViewSearchBox != null)
+            //{
+            //    var list = this._songService.GetAllSong(ProjectConfiguration.CurrentMemberCredential);
+            //    if (!string.IsNullOrEmpty(ProjectConfiguration.txtNavViewSearchBox))
+            //    {
+            //        var txtchangeList = list.Where(en =>
+            //                                          (en.name.IndexOf(ProjectConfiguration.txtNavViewSearchBox, StringComparison.OrdinalIgnoreCase) >= 0))
+            //                                   .OrderBy(en => en.name).ToList();
+            //        ListAllSong = new ObservableCollection<Song>(txtchangeList);
+            //    }
+            //    else
+            //    {
+            //        ListAllSong = new ObservableCollection<Song>(list);
+            //    }
+            //}
             else
             {
                 Debug.WriteLine("Have all song");
             }
+
             ListViewSong.ItemsSource = ListAllSong;
         }
 
@@ -156,6 +175,13 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
             MyMediaElement.Source = new Uri(song.link);
             txtNowPlaying.Text = "Now playing: " + song.name + " - " + song.singer;
             MyMediaElement.Play();
+        }
+
+        private void BtnSignOut_Click(object sender, RoutedEventArgs e)
+        {
+            ProjectConfiguration.CurrentMemberCredential = null;
+            this._fileService.SignOutByDeleteToken();
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

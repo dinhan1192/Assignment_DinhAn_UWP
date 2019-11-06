@@ -1,4 +1,5 @@
 ﻿using Assignment_UWP_DinhVanHoangAn.Entity;
+using Assignment_UWP_DinhVanHoangAn.Pages.MusicPages;
 using Assignment_UWP_DinhVanHoangAn.Service;
 using System;
 using System.Collections.Generic;
@@ -40,7 +41,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MasterPages
             if(memberCredential != null)
             {
                 ProjectConfiguration.CurrentMemberCredential = memberCredential;
-            }
+            } 
         }
 
         private void ContentFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
@@ -51,7 +52,6 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MasterPages
         // List of ValueTuple holding the Navigation Tag and the relative Navigation Page
         private readonly List<(string Tag, Type Page)> _pages = new List<(string Tag, Type Page)>
 {
-    ("home", typeof(MainPage)),
     ("mymusic", typeof(MusicPages.MyMusicPage)),
     ("allmusic", typeof(MusicPages.AllMusicPage)),
     ("register", typeof(Pages.AuthenticationPages.RegisterPage)),
@@ -79,7 +79,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MasterPages
             // If navigation occurs on SelectionChanged, this isn't needed.
             // Because we use ItemInvoked to navigate, we need to call Navigate
             // here to load the home page.
-            NavView_Navigate("home", new EntranceNavigationTransitionInfo());
+            NavView_Navigate("allmusic", new EntranceNavigationTransitionInfo());
 
             // Add keyboard accelerators for backwards navigation.
             var goBack = new KeyboardAccelerator { Key = VirtualKey.GoBack };
@@ -199,6 +199,24 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MasterPages
                 NavView.Header =
                     ((NavigationViewItem)NavView.SelectedItem)?.Content?.ToString();
             }
+        }
+
+        //private void NavViewSearchBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        //{
+        //    AllMusicPage page = new AllMusicPage();
+        //    if (page.IsLoaded == false)
+        //    {
+        //        page.LoadAllSongs();
+        //        this.Frame.Navigate(typeof(Pages.MusicPages.AllMusicPage));
+        //    }
+        //}
+
+        private void NavViewSearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        {
+            // chưa làm được search
+            ProjectConfiguration.txtNavViewSearchBox = NavViewSearchBox.Text;
+            AllMusicPage page = new AllMusicPage();
+            page.LoadAllSongs();
         }
     }
 }

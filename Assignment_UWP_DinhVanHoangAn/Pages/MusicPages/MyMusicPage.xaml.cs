@@ -32,6 +32,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
         private ISongService _songService;
         private bool running = false;
         private int currentIndex = 0;
+        private IFileService _fileService;
 
         public MyMusicPage()
         {
@@ -81,6 +82,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
             this.Loaded += CheckAndLoad;
             this.InitializeComponent();
             this._songService = new SongService();
+            this._fileService = new LocalFileService();
             //DispatcherTimer timer = new DispatcherTimer();
             //timer.Interval = TimeSpan.FromSeconds(1);
             //timer.Tick += timer_Tick;
@@ -121,6 +123,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
             {
                 Debug.WriteLine("Fetching song");
                 var list = this._songService.GetMineSongs(ProjectConfiguration.CurrentMemberCredential);
+               
                 ListSong = new ObservableCollection<Song>(list);
                 refresh = false;
             }
@@ -211,6 +214,13 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
             MyMediaElement.Source = new Uri(song.link);
             txtNowPlaying.Text = "Now playing: " + song.name + " - " + song.singer;
             MyMediaElement.Play();
+        }
+
+        private void BtnSignOut_Click(object sender, RoutedEventArgs e)
+        {
+            ProjectConfiguration.CurrentMemberCredential = null;
+            this._fileService.SignOutByDeleteToken();
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

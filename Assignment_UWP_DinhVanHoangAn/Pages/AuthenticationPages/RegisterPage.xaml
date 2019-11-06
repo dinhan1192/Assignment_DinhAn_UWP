@@ -34,7 +34,7 @@
         </Style>
     </Page.Resources>
 
-    <ScrollViewer>
+    <ScrollViewer Background="Beige">
         <ScrollViewer.Content>
             <StackPanel>
                 <TextBlock FontSize="30" Margin="20">Register Form</TextBlock>

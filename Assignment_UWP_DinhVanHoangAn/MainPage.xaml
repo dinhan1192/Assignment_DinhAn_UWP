@@ -11,7 +11,7 @@
     <Grid Background="Aqua">
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
             <TextBlock Margin="20" HorizontalAlignment="Center">
-                Please <Hyperlink x:Name="hypLogin" Click="HypLogin_Click">Login</Hyperlink> or 
+                Welcome Back! Please <Hyperlink x:Name="hypLogin" Click="HypLogin_Click">Login</Hyperlink> or 
                 <Hyperlink x:Name="hypRegister" Click="HypRegister_Click">Register</Hyperlink> 
             </TextBlock>
         </StackPanel>

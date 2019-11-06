@@ -84,7 +84,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.AuthenticationPages
                 var memberCredential = this._memberService.Login(memberLogin);
                 ProjectConfiguration.CurrentMemberCredential = memberCredential;
                 this._fileService.SaveMemberCredentialToFile(memberCredential);
-                this.Frame.Navigate(typeof(AccountInfoPage));
+                this.Frame.Navigate(typeof(MusicPages.AllMusicPage));
 
                 // tao bang trong SQLite
                 SQLiteDemo sQLiteDemo = new SQLiteDemo();

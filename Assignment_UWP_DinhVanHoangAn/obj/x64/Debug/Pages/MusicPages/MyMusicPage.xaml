@@ -10,19 +10,19 @@
     NavigationCacheMode="Enabled"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
+    <Grid Background="AntiqueWhite">
         <ScrollViewer>
-            <ListView x:ConnectionId='8' x:Name="ListViewSong">
+            <ListView x:ConnectionId='9' x:Name="ListViewSong">
                 <ListView.ItemTemplate>
                     <DataTemplate                         >
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel Orientation="Horizontal" Margin="10">
                             <Ellipse Height="60" Width="60">
                                 <Ellipse.Fill>
                                     <ImageBrush ImageSource="{Binding thumbnail}" />
                                 </Ellipse.Fill>
                             </Ellipse>
-                            <TextBlock FontSize="20" FontWeight="Bold" Text="{Binding name}"></TextBlock>
-                            <SymbolIcon x:ConnectionId='10' Symbol="Play"                                         Tag="{Binding}"/>
+                            <TextBlock FontSize="20" FontWeight="Bold" Text="{Binding name}" VerticalAlignment="Center" Margin="10"></TextBlock>
+                            <SymbolIcon x:ConnectionId='11' Symbol="Play"                                         Tag="{Binding}"/>
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>
@@ -40,12 +40,13 @@
         <CommandBar VerticalAlignment="Bottom">
             <!--<AppBarToggleButton Icon="Shuffle" Label="Shuffle" Click="AppBarButton_Click" />
             <AppBarToggleButton Icon="RepeatAll" Label="Repeat" Click="AppBarButton_Click"/>-->
+            <AppBarButton x:ConnectionId='3' Icon="BackToWindow" x:Name="btnSignOut" Label="SignOut"                         >Sign Out</AppBarButton>
             <AppBarSeparator/>
-            <AppBarButton x:ConnectionId='3' Icon="Add"  x:Name="btnCreateMusic" Label="Play"                             >Create Music</AppBarButton>
+            <AppBarButton x:ConnectionId='4' Icon="Add"  x:Name="btnCreateMusic" Label="Play"                             >Create Music</AppBarButton>
             <AppBarSeparator/>
-            <AppBarButton x:ConnectionId='4' Icon="Previous" x:Name="Previous" Label="Previous"                       />
-            <AppBarButton x:ConnectionId='5' Icon="Play" x:Name="PlayAndPause" Label="Play"                           />
-            <AppBarButton x:ConnectionId='6' Icon="Next" x:Name="Next" Label="Next"                   />
+            <AppBarButton x:ConnectionId='5' Icon="Previous" x:Name="Previous" Label="Previous"                       />
+            <AppBarButton x:ConnectionId='6' Icon="Play" x:Name="PlayAndPause" Label="Play"                           />
+            <AppBarButton x:ConnectionId='7' Icon="Next" x:Name="Next" Label="Next"                   />
 
             <!--<CommandBar.SecondaryCommands>
                 <AppBarButton Label="Like" Click="AppBarButton_Click"/>
@@ -53,7 +54,7 @@
             </CommandBar.SecondaryCommands>-->
 
             <CommandBar.Content>
-                <TextBlock x:ConnectionId='7' x:Name="txtNowPlaying" Text="Now playing..." Margin="12,14"/>
+                <TextBlock x:ConnectionId='8' x:Name="txtNowPlaying" Text="Now playing..." Margin="12,14"/>
             </CommandBar.Content>
         </CommandBar>
         <MediaElement x:ConnectionId='2' x:Name="MyMediaElement"></MediaElement>
