@@ -15,14 +15,14 @@
             <ListView x:ConnectionId='9' x:Name="ListViewSong">
                 <ListView.ItemTemplate>
                     <DataTemplate                         >
-                        <StackPanel Orientation="Horizontal" Margin="10">
+                        <StackPanel x:ConnectionId='10' Orientation="Horizontal" Margin="10" x:Name="spSong"                                    IsDoubleTapEnabled="True" Tag="{Binding}">
                             <Ellipse Height="60" Width="60">
                                 <Ellipse.Fill>
                                     <ImageBrush ImageSource="{Binding thumbnail}" />
                                 </Ellipse.Fill>
                             </Ellipse>
                             <TextBlock FontSize="20" FontWeight="Bold" Text="{Binding name}" VerticalAlignment="Center" Margin="10"></TextBlock>
-                            <SymbolIcon x:ConnectionId='11' Symbol="Play"                                         Tag="{Binding}"/>
+                            <!--<SymbolIcon Symbol="Play" DoubleTapped="UIElement_OnDoubleTapped" Tag="{Binding}"/>-->
                         </StackPanel>
                     </DataTemplate>
                 </ListView.ItemTemplate>

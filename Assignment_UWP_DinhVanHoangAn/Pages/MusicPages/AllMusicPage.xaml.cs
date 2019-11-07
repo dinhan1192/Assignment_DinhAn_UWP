@@ -63,14 +63,14 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
 
         public void LoadAllSongs()
         {
-            if (refresh)
-            {
-                Debug.WriteLine("Fetching song");
-                var list = this._songService.GetAllSong(ProjectConfiguration.CurrentMemberCredential);
-                ListAllSong = new ObservableCollection<Song>(list);
+            //if (refresh)
+            //{
+            Debug.WriteLine("Fetching song");
+            var list = this._songService.GetAllSong(ProjectConfiguration.CurrentMemberCredential);
+            ListAllSong = new ObservableCollection<Song>(list);
 
-                refresh = false;
-            }
+            refresh = false;
+            //}
             //else if (!refresh && ProjectConfiguration.txtNavViewSearchBox != null)
             //{
             //    var list = this._songService.GetAllSong(ProjectConfiguration.CurrentMemberCredential);
@@ -86,10 +86,10 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
             //        ListAllSong = new ObservableCollection<Song>(list);
             //    }
             //}
-            else
-            {
-                Debug.WriteLine("Have all song");
-            }
+            //else
+            //{
+            //    Debug.WriteLine("Have all song");
+            //}
 
             ListViewSong.ItemsSource = ListAllSong;
         }
@@ -107,31 +107,19 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
             }
         }
 
-        private void UIElement_OnDoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
-        {
-            //var playIcon = sender as SymbolIcon;
-            //var currentSong = playIcon.Tag as Song;
-            //Debug.WriteLine(currentSong.name);
-            //MyMediaElement.Source = new Uri(currentSong.link);
-            //txtNowPlaying.Text = "Now Playing: " + currentSong.name + " - " + currentSong.singer;
-            //MyMediaElement.Play();
-            //PlayAndPause.Icon = new SymbolIcon(Symbol.Pause);
-            //running = true;
+        //private void UIElement_OnDoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
+        //{
+        //    //var playIcon = sender as SymbolIcon;
+        //    //var currentSong = playIcon.Tag as Song;
+        //    //Debug.WriteLine(currentSong.name);
+        //    //MyMediaElement.Source = new Uri(currentSong.link);
+        //    //txtNowPlaying.Text = "Now Playing: " + currentSong.name + " - " + currentSong.singer;
+        //    //MyMediaElement.Play();
+        //    //PlayAndPause.Icon = new SymbolIcon(Symbol.Pause);
+        //    //running = true;
 
-            Debug.WriteLine(ListViewSong.SelectedIndex);
-            currentIndex = ListViewSong.SelectedIndex;
-            var playIcon = sender as SymbolIcon;
-            if (playIcon != null)
-            {
-                var currentSong = playIcon.Tag as Song;
-                Debug.WriteLine(currentSong.name);
-                MyMediaElement.Source = new Uri(currentSong.link);
-                txtNowPlaying.Text = "Now playing: " + currentSong.name + " - " + currentSong.singer;
-            }
-            MyMediaElement.Play();
-            PlayAndPause.Icon = new SymbolIcon(Symbol.Pause);
-            running = true;
-        }
+
+        //}
 
         private void Previous_Click(object sender, RoutedEventArgs e)
         {
@@ -182,6 +170,23 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
             ProjectConfiguration.CurrentMemberCredential = null;
             this._fileService.SignOutByDeleteToken();
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void SpSong_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
+        {
+            Debug.WriteLine(ListViewSong.SelectedIndex);
+            currentIndex = ListViewSong.SelectedIndex;
+            var playIcon = sender as StackPanel;
+            if (playIcon != null)
+            {
+                var currentSong = playIcon.Tag as Song;
+                Debug.WriteLine(currentSong.name);
+                MyMediaElement.Source = new Uri(currentSong.link);
+                txtNowPlaying.Text = "Now playing: " + currentSong.name + " - " + currentSong.singer;
+            }
+            MyMediaElement.Play();
+            PlayAndPause.Icon = new SymbolIcon(Symbol.Pause);
+            running = true;
         }
     }
 }
