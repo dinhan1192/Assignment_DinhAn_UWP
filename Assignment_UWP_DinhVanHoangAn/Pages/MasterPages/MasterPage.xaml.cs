@@ -3,6 +3,7 @@ using Assignment_UWP_DinhVanHoangAn.Pages.MusicPages;
 using Assignment_UWP_DinhVanHoangAn.Service;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -37,11 +38,19 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MasterPages
 
         private async void LoadCurrentLoggedIn(object sender, RoutedEventArgs e)
         {
-            var memberCredential = await this._fileService.ReadMemberCredentialFromFile();
-            if(memberCredential != null)
+            try
             {
-                ProjectConfiguration.CurrentMemberCredential = memberCredential;
-            } 
+                var memberCredential = await this._fileService.ReadMemberCredentialFromFile();
+                if (memberCredential != null)
+                {
+                    ProjectConfiguration.CurrentMemberCredential = memberCredential;
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.ToString());
+            }
+            
         }
 
         private void ContentFrame_NavigationFailed(object sender, NavigationFailedEventArgs e)
@@ -211,12 +220,12 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MasterPages
         //    }
         //}
 
-        private void NavViewSearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
-        {
-            // chưa làm được search
-            ProjectConfiguration.txtNavViewSearchBox = NavViewSearchBox.Text;
-            AllMusicPage page = new AllMusicPage();
-            page.LoadAllSongs();
-        }
+        //private void NavViewSearchBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
+        //{
+        //    // chưa làm được search
+        //    //ProjectConfiguration.txtNavViewSearchBox = NavViewSearchBox.Text;
+        //    //AllMusicPage page = new AllMusicPage();
+        //    //page.LoadAllSongs();
+        //}
     }
 }

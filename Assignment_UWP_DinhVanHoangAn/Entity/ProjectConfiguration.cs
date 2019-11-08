@@ -24,8 +24,6 @@ namespace Assignment_UWP_DinhVanHoangAn.Entity
         #region variable
 
         public static MemberCredential CurrentMemberCredential;
-        public static List<Song> ListSongSearch;
-        public static string txtNavViewSearchBox;
 
         #endregion
     }

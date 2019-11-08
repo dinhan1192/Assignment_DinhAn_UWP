@@ -28,7 +28,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
     public sealed partial class MyMusicPage : Page
     {
         static ObservableCollection<Song> ListSong;
-        static bool refresh = true;
+        //static bool refresh = true;
         private ISongService _songService;
         private bool running = false;
         private int currentIndex = 0;
@@ -125,7 +125,7 @@ namespace Assignment_UWP_DinhVanHoangAn.Pages.MusicPages
             var list = this._songService.GetMineSongs(ProjectConfiguration.CurrentMemberCredential);
 
             ListSong = new ObservableCollection<Song>(list);
-            refresh = false;
+            //refresh = false;
             //}
             //else
             //{

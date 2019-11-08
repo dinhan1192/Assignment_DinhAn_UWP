@@ -22,22 +22,22 @@
                                            Content="Main pages"/>
                     <NavigationViewItem Tag="mymusic" Content="My Music">
                         <NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xEB3C;"/>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE728;"/>
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
                     <NavigationViewItem Tag="register" Content="Register">
                         <NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE716;"/>
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
                     <NavigationViewItem Tag="login" Content="Login">
                         <NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE77B;"/>
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
                     <NavigationViewItem Tag="accountInfo" Content="AccountInfo">
                         <NavigationViewItem.Icon>
-                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE7FC;"/>
+                            <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE779;"/>
                         </NavigationViewItem.Icon>
                     </NavigationViewItem>
                 </NavigationView.MenuItems>

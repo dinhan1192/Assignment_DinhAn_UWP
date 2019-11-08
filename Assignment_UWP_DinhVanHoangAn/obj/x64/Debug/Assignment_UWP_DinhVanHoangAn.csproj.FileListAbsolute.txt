@@ -83,7 +83,6 @@ D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\
 D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\obj\x64\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\obj\x64\Debug\ProjectArchitectures.txt
 D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636758300200000000.json
-D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\obj\x64\Debug\Assignment_UWP_DinhVanHoangAn.csprojAssemblyReference.cache
 D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\SQLitePCL.Ext.dll
 D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\SQLitePCL.Ext.pri
 D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\sqlite3.dll
@@ -92,3 +91,4 @@ D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\
 D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\obj\x64\Debug\resources.en.resfiles
 D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\obj\x64\Debug\resources.en.resfiles.intermediate
 D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\obj\x64\Debug\SQLitePCL.Ext.pri.xml
+D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\obj\x64\Debug\Assignment_UWP_DinhVanHoangAn.csprojAssemblyReference.cache

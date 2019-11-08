@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-11-07T15:03:42.086</Modified>
+      <Modified>2019-11-08T03:31:57.491</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\Assignment_UWP_DinhVanHoangAn.exe">
       <PackagePath>entrypoint\Assignment_UWP_DinhVanHoangAn.exe</PackagePath>
-      <Modified>2019-11-07T15:03:41.267</Modified>
+      <Modified>2019-11-08T03:31:56.884</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Admin\.nuget\packages\newtonsoft.json\12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -106,43 +106,43 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-11-07T15:03:40.960</Modified>
+      <Modified>2019-11-08T03:31:56.642</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-11-07T15:03:40.961</Modified>
+      <Modified>2019-11-08T03:31:56.643</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\Pages\AuthenticationPages\AccountInfoPage.xbf">
       <PackagePath>Pages\AuthenticationPages\AccountInfoPage.xbf</PackagePath>
-      <Modified>2019-11-07T15:03:40.961</Modified>
+      <Modified>2019-11-08T03:31:56.643</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\Pages\AuthenticationPages\LoginPage.xbf">
       <PackagePath>Pages\AuthenticationPages\LoginPage.xbf</PackagePath>
-      <Modified>2019-11-07T15:03:40.961</Modified>
+      <Modified>2019-11-08T03:31:56.643</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\Pages\AuthenticationPages\RegisterPage.xbf">
       <PackagePath>Pages\AuthenticationPages\RegisterPage.xbf</PackagePath>
-      <Modified>2019-11-07T15:03:40.931</Modified>
+      <Modified>2019-11-08T03:31:56.627</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\Pages\MasterPages\MasterPage.xbf">
       <PackagePath>Pages\MasterPages\MasterPage.xbf</PackagePath>
-      <Modified>2019-11-07T15:03:40.962</Modified>
+      <Modified>2019-11-08T03:31:56.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\Pages\MusicPages\AllMusicPage.xbf">
       <PackagePath>Pages\MusicPages\AllMusicPage.xbf</PackagePath>
-      <Modified>2019-11-07T15:03:40.962</Modified>
+      <Modified>2019-11-08T03:31:56.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\Pages\MusicPages\CreateMusicPage.xbf">
       <PackagePath>Pages\MusicPages\CreateMusicPage.xbf</PackagePath>
-      <Modified>2019-11-07T15:03:40.962</Modified>
+      <Modified>2019-11-08T03:31:56.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\Pages\MusicPages\MyMusicPage.xbf">
       <PackagePath>Pages\MusicPages\MyMusicPage.xbf</PackagePath>
-      <Modified>2019-11-07T15:03:40.963</Modified>
+      <Modified>2019-11-08T03:31:56.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\Pages\SettingPages\SettingPage.xbf">
       <PackagePath>Pages\SettingPages\SettingPage.xbf</PackagePath>
-      <Modified>2019-11-07T15:03:40.963</Modified>
+      <Modified>2019-11-08T03:31:56.644</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -150,11 +150,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-11-04T07:04:59.407</Modified>
+      <Modified>2019-11-08T03:05:24.808</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Lap Trinh\T1808A\Assignment_UWP_DinhVanHoangAn\Assignment_UWP_DinhVanHoangAn\bin\x64\Debug\Core\Assignment_UWP_DinhVanHoangAn.exe">
       <PackagePath>Assignment_UWP_DinhVanHoangAn.exe</PackagePath>
-      <Modified>2019-11-07T15:03:42.079</Modified>
+      <Modified>2019-11-08T03:31:57.488</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
